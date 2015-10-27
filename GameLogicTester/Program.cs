@@ -19,13 +19,17 @@ namespace GameLogicTester
         {
             var head = "http://localhost:9876/";
 
-            var urls = new[]
+            var _urls = new[]
             {
                 head + "config?gameId=1?userId=1",
                 head + "init?gameId=1?userId=1",
                 head + "play?gameId=1?userId=1?betcount=1?rate=0.00",
                 head + "correct?gameId=1?userId=1?reelstopleft=0?reelstopright=0?reelstopcenter=0?oshijun=0",
             };
+
+            var urls = from url in _urls
+                       from count in Enumerable.Range(0, 100)
+                       select url;
 
             var msg = String.Join(
                 Environment.NewLine,
