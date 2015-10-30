@@ -21,7 +21,7 @@ namespace GameLogicTester
                 head + "config?gameId={0}?userId={1}",
                 head + "init?gameId={0}?userId={1}",
                 head + "play?gameId={0}?userId={1}?betcount=1?rate=0.00",
-                head + "correct?gameId={0}?userId={1}?reelstopleft=0?reelstopright=0?reelstopcenter=0?oshijun=0",
+                head + "collect?gameId={0}?userId={1}?reelstopleft=0?reelstopright=0?reelstopcenter=0?oshijun=0",
             };
 
             var urls = from gameId in Enumerable.Range(2, 1)
